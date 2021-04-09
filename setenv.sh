@@ -29,12 +29,15 @@ file_env 'EXTRA_CACERTS_PASSWORD' 'secret'
 file_env 'WILDFLY_ADMIN_USER'
 file_env 'WILDFLY_ADMIN_PASSWORD'
 
-if [ $LOGSTASH_HOST ]; then
-	SYS_PROPS="-c dcm4chee-arc-ui-logstash.xml"
-else
-	SYS_PROPS="-c dcm4chee-arc-ui.xml"
+if [ "$WILDFLY_ADMIN_OIDC" != 'false' ]; then
+	OIDC="-oidc"
 fi
 
+if [ -n "$LOGSTASH_HOST" ]; then
+	LOGSTASH="-logstash"
+fi
+
+SYS_PROPS="-c dcm4chee-arc-ui${OIDC}${LOGSTASH}.xml"
 SYS_PROPS+=" -Djboss.management.http.port=${MANAGEMENT_HTTP_PORT:-9990}"
 SYS_PROPS+=" -Djboss.management.https.port=${MANAGEMENT_HTTPS_PORT:-9993}"
 SYS_PROPS+=" -Djboss.http.port=${HTTP_PORT:-8080}"

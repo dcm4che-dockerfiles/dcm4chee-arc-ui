@@ -4,7 +4,7 @@ ENV DCM4CHEE_ARC_VERSION 5.23.3
 
 RUN cd $JBOSS_HOME \
     && cd /docker-entrypoint.d/deployments \
-    && curl -fO http://maven.dcm4che.org/org/dcm4che/dcm4chee-arc/dcm4chee-arc-ui2/${DCM4CHEE_ARC_VERSION}/dcm4chee-arc-ui2-${DCM4CHEE_ARC_VERSION}.war
+    && curl -fO http://maven.dcm4che.org/org/dcm4che/dcm4chee-arc/dcm4chee-arc-ui2/${DCM4CHEE_ARC_VERSION}/dcm4chee-arc-ui2-${DCM4CHEE_ARC_VERSION}-secure.war
 
 COPY setenv.sh /
 COPY configuration /docker-entrypoint.d/configuration
