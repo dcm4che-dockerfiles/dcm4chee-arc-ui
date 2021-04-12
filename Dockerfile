@@ -12,6 +12,6 @@ COPY configuration /docker-entrypoint.d/configuration
 # Default configuration: can be overridden at the docker command line
 ENV KEYSTORE=/opt/wildfly/standalone/configuration/keystores/key.p12 \
     KEYSTORE_TYPE=PKCS12 \
-    TRUSTSTORE=/usr/local/openjdk-11/lib/security/cacerts \
+    TRUSTSTORE=/opt/java/openjdk/lib/security/cacerts \
     TRUSTSTORE_TYPE=JKS \
     EXTRA_CACERTS=/opt/wildfly/standalone/configuration/keystores/cacerts.p12
