@@ -1,6 +1,6 @@
 FROM dcm4che/wildfly:ffmpeg-24.0.1-14.0.0
 
-ENV DCM4CHEE_ARC_VERSION 5.23.3
+ENV DCM4CHEE_ARC_VERSION 5.24.0
 
 RUN cd $JBOSS_HOME \
     && cd /docker-entrypoint.d/deployments \
@@ -12,6 +12,6 @@ COPY configuration /docker-entrypoint.d/configuration
 # Default configuration: can be overridden at the docker command line
 ENV KEYSTORE=/opt/wildfly/standalone/configuration/keystores/key.p12 \
     KEYSTORE_TYPE=PKCS12 \
-    TRUSTSTORE=/usr/local/openjdk-11/lib/security/cacerts \
+    TRUSTSTORE=/opt/java/openjdk/lib/security/cacerts \
     TRUSTSTORE_TYPE=JKS \
     EXTRA_CACERTS=/opt/wildfly/standalone/configuration/keystores/cacerts.p12
