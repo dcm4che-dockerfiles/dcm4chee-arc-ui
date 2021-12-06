@@ -42,6 +42,7 @@
     <system-properties>
         <property name="dcm4chee-arc.DeviceName" value="${env.ARCHIVE_DEVICE_NAME:dcm4chee-arc}"/>
         <property name="dcm4chee-arc-urls" value="${env.DCM4CHEE_ARC_URLS:/dcm4chee-arc}"/>
+        <property name="super-user-role" value="${env.SUPER_USER_ROLE:root}"/>
     </system-properties>
     <management>
         <security-realms>
