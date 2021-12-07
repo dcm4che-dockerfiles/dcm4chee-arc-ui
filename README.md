@@ -79,7 +79,7 @@ User role required to access the Archive UI (optional, default is `user`).
 #### `SUPER_USER_ROLE`
 
 User role to identify super users, which have unrestricted access to all UI functions of the Archive, bypassing the
-verification of user permissions (optional, default is `admin`).
+verification of user permissions (optional, default is `root`).
 
 #### `KEYSTORE`
 
