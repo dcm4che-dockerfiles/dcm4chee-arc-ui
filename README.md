@@ -29,6 +29,18 @@ E.g.: http://test-ng:8080/dcm4chee-arc
 This environment variable is used to set the JAVA_OPTS during Archive UI startup (optional, default is 
 `"-Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true"`
 
+#### `WILDFLY_STANDALONE`
+
+Specifies subdirectories of - typically host mounted - `/opt/wildfly/standalone/` which files and subdirectories get
+updated by newer versions from corresponding subdirectories of `/docker-entrypoint.d/` provided by the image on each
+container start. (optional, default is `configuration deployments`).
+
+#### `WILDFLY_STANDALONE_PURGE`
+
+Specifies subdirectories of `/opt/wildfly/standalone/` which files and subdirectories get purged on each container start
+before copying subdirectories specified by [WILDFLY_STANDALONE](#wildfly_standalone) from `/docker-entrypoint.d/`.
+Enables to replace also newer files in host directories by files with older timestamp from the image.
+
 #### `WILDFLY_WAIT_FOR`
 
 Indicates to delay the start of the Archive UI until specified TCP ports become accessible. Format: `<host>:<port> ...`, e.g.: `ldap:389 db:5432`.
