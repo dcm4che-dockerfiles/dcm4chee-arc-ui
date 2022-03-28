@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`5.25.2` (*5.25.2/Dockerfile*)](https://github.com/dcm4che-dockerfiles/dcm4chee-arc-ui/blob/5.25.2/Dockerfile)
-- [`5.25.2-secure` (*5.25.2-secure/Dockerfile*)](https://github.com/dcm4che-dockerfiles/dcm4chee-arc-ui/blob/5.25.2-secure/Dockerfile)
+- [`5.26.0` (*5.26.0/Dockerfile*)](https://github.com/dcm4che-dockerfiles/dcm4chee-arc-ui/blob/5.26.0/Dockerfile)
+- [`5.26.0-secure` (*5.26.0-secure/Dockerfile*)](https://github.com/dcm4che-dockerfiles/dcm4chee-arc-ui/blob/5.26.0-secure/Dockerfile)
 
 ## How to use this image
 
