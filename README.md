@@ -225,6 +225,11 @@ Keycloak client ID for [securing the Wildfly Administration Console](https://doc
 Keycloak client ID for [securing the Wildfly Management API](https://docs.jboss.org/author/display/WFLY/Protecting+Wildfly+Adminstration+Console+With+Keycloak).
 (optional, default is `wildfly-management`).
 
+#### `WILDFLY_DISABLE_CACHING_FOR_SECURED_PAGES`
+
+Controls if Wildfly Undertow servlet container should set headers to disable caching for secured pages
+(optional, default is `false`).
+
 ### [Logstash/GELF Logger](https://logging.paluch.biz/) configuration:
 
 #### `LOGSTASH_HOST`
