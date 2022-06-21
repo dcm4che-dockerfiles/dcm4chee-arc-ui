@@ -508,7 +508,7 @@
                     <http-invoker http-authentication-factory="application-http-authentication"/>
                 </host>
             </server>
-            <servlet-container name="default" disable-caching-for-secured-pages="${env.WILDFLY_DISABLE_CACHING_FOR_SECURED_PAGES:true}">
+            <servlet-container name="default" disable-caching-for-secured-pages="${env.WILDFLY_DISABLE_CACHING_FOR_SECURED_PAGES:false}">
                 <jsp-config/>
                 <websockets/>
             </servlet-container>
@@ -530,7 +530,7 @@
             <client-config name="Standard-Client-Config"/>
         </subsystem>
         <subsystem xmlns="urn:jboss:domain:weld:4.0"/>
-        <subsystem xmlns="urn:jboss:domain:keycloak:1.1">
+        <subsystem xmlns="urn:jboss:domain:keycloak:1.2">
             <secure-deployment name="dcm4chee-arc-ui2-5.26.1-secure.war">
                 <realm>${env.REALM_NAME:dcm4che}</realm>
                 <auth-server-url>${env.AUTH_SERVER_URL:http://keycloak:8080/auth}</auth-server-url>
