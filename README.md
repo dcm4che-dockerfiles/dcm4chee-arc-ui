@@ -45,6 +45,14 @@ Enables to replace also newer files in host directories by files with older time
 
 Indicates to delay the start of the Archive UI until specified TCP ports become accessible. Format: `<host>:<port> ...`, e.g.: `ldap:389 db:5432`.
 
+#### `WILDFLY_CRON_ENABLED`
+
+Start cron daemon to execute scheduled commands (optional, default is `false`).
+
+#### `WILDFLY_LOG_RETENTION_DAYS`  (Only effective with `WILDFLY_CRON_ENABLED=true`)
+
+Delete `/opt/wildfly/standalone/log/server.log*` files older than specified number of days automatically (optional, default is `7`).
+
 #### `HTTP_PORT`
 
 HTTP port of the Archive UI (optional, default is `8080`).
