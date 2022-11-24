@@ -462,6 +462,7 @@
                 <https-listener name="https" socket-binding="https" ssl-context="applicationSSC" enable-http2="true"/>
                 <host name="default-host" alias="localhost">
                     <location name="/" handler="welcome-content"/>
+                    <location name="/resources" handler="resources"/>
                     <http-invoker http-authentication-factory="application-http-authentication"/>
                 </host>
             </server>
@@ -471,6 +472,7 @@
             </servlet-container>
             <handlers>
                 <file name="welcome-content" path="${jboss.home.dir}/welcome-content"/>
+                <file name="resources" path="${jboss.server.config.dir}/resources"/>
             </handlers>
             <application-security-domains>
                 <application-security-domain name="other" security-domain="ApplicationDomain"/>
