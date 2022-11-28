@@ -15,4 +15,5 @@ ENV KEYSTORE=/opt/wildfly/standalone/configuration/keystores/key.p12 \
     KEYSTORE_TYPE=PKCS12 \
     TRUSTSTORE=/opt/java/openjdk/lib/security/cacerts \
     TRUSTSTORE_TYPE=JKS \
-    EXTRA_CACERTS=/opt/wildfly/standalone/configuration/keystores/cacerts.p12
+    EXTRA_CACERTS=/opt/wildfly/standalone/configuration/keystores/cacerts.p12 \
+    WILDFLY_CONFIGURATION_VERSION=$DCM4CHEE_ARC_VERSION
